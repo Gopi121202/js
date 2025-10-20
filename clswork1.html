@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script language="JavaScript" type="text/javascript">
+      var tshirt = 5;
+      var cap = 3;
+      var tshirt_price = 400;
+      var cap_price = 150;
+      document.write("Tshirt =", tshirt);
+      document.write("<br/>");
+      document.write("cap =", cap);
+      document.write("<br/>");
+      var total_earnings = tshirt * tshirt_price + cap * cap_price;
+      document.write("<br/>");
+      document.write(
+        "Total earnings from tshirt and cap sales is: " + total_earnings
+      );
+      var newtshirt_price = 450;
+      var new_total_earnings = tshirt * newtshirt_price + cap * cap_price;
+      document.write("<br/>");
+      document.write(
+        "<br/>After price change, total earnings from tshirt and cap sales is: " +
+          new_total_earnings
+      );
+    </script>
+  </body>
+</html>
