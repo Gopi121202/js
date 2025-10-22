@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color: lightblue; padding: 10px; margin: auto">
+    <h2 style="font-style: italic; text-align: center">Feedback Form</h2>
+    <p style="font-weight: bolder">Trim Feedback</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo">" I loved the FOOD and the service! "</p>
+
+    <script>
+      function myFunction() {
+        var text = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML = text.trim();
+      }
+    </script>
+    <br />
+    <p style="font-weight: bolder">Feedbacks in lowercase:</p>
+    <button onclick="myFunction1()">Try it</button>
+
+    <p id="demo1">" I loved the FOOD and the service! "</p>
+
+    <script>
+      function myFunction1() {
+        var text = document.getElementById("demo1").innerHTML;
+        document.getElementById("demo1").innerHTML = text.toLowerCase();
+      }
+    </script>
+    <br />
+    <p style="font-weight: bolder">Feedbacks with replacement</p>
+    <button onclick="myFunction2()">Try it</button>
+
+    <p id="demo2">" I loved the FOOD and the service! "</p>
+
+    <script>
+      function myFunction2() {
+        var text = document.getElementById("demo2").innerHTML;
+        document.getElementById("demo2").innerHTML = text.replace(
+          "FOOD",
+          "ambience"
+        );
+      }
+    </script>
+    <br />
+    <p style="font-weight: bolder">Position of word service in Feedback</p>
+    <button onclick="myFunction3()">Try it</button>
+    <p id="demo3">" I loved the ambience and the service! "</p>
+
+    <script>
+      function myFunction3() {
+        var text = document.getElementById("demo3").innerHTML;
+        document.getElementById("demo3").innerHTML = text.indexOf("service");
+      }
+    </script>
+    <br />
+    <p style="font-weight: bolder">String to an array</p>
+    <button onclick="myFunction4()">Try it</button>
+    <p id="demo=4">" I loved the ambience and the service! "</p>
+    <script>
+      function myFunction4() {
+        var text = document.getElementById("demo=4").innerHTML;
+        document.getElementById("demo=4").innerHTML = text.split(" ");
+      }
+    </script>
+  </body>
+</html>
