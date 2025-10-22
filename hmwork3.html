@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Website</title>
+  </head>
+  <body>
+    <h1
+      class="containerflow"
+      style="
+        background-color: rgb(212, 171, 119);
+        font-weight: bolder;
+        text-align: center;
+        padding-top: 0%;
+        margin-top: 0;
+      "
+    >
+      Admin Site
+    </h1>
+    <p style="font-weight: bolder; text-align: center">
+      Welcome to the Admin Website
+    </p>
+
+    <p style="font-weight: bolder; text-align: center">Username: CoolUser99</p>
+    <p style="font-weight: bolder; text-align: center">
+      Bio: I LOVE coding Javascript is Great!"
+    </p>
+    <br />
+    <script>
+      //   Trim and convert username and bio to lowercase
+      var username = "   CoolUser99   ";
+      var bio = "   I LOVE coding Javascript is Great!   ";
+      console.log("New Username:" + username.trim().toLowerCase());
+      console.log("New Bio:" + bio.trim().toLowerCase());
+    </script>
+    <!-- Replace Javascript with JS -->
+    <script>
+      var bio1 = "i love coding Javascript is great!";
+      var newBio = bio1.replace("Javascript", "JS");
+      console.log("Updated Bio:" + newBio);
+    </script>
+    <!-- total number of characters in Bio -->
+    <script>
+      console.log("Total number of characters in Bio:" + newBio.length);
+    </script>
+    <!-- display new bio and username -->
+    <script>
+      document.write(
+        "<h3 style='text-align:center;'>Updated Profile Information</h3>"
+      );
+      document.write(
+        "<p style='text-align:center;'>Username: " +
+          username.trim().toLowerCase() +
+          "</p>"
+      );
+      document.write("<p style='text-align:center;'>Bio: " + newBio + "</p>");
+    </script>
+  </body>
+</html>
