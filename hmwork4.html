@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Result Generator</title>
+  </head>
+  <body>
+    <p>Generate a random mystery level between 1 and 50</p>
+    <script>
+      var mysteryLevel = Math.floor(Math.random() * 50) + 1;
+      document.write("Mystery Level:", mysteryLevel);
+      console.log("Mystery Level:", mysteryLevel);
+    </script>
+    <p>Simulate user input as a string</p>
+    <script>
+      const userInput = "45";
+      const userScore = Number(userInput);
+      console.log("User Score:", userScore);
+    </script>
+
+    <p>Calculate absolute difference</p>
+    <script>
+      const difference = Math.abs(mysteryLevel - userScore);
+      console.log("Absolute Difference:", difference);
+    </script>
+
+    <p>Calculate square root of user's score</p>
+    <script>
+      const sqrtScore = Math.sqrt(userScore);
+      console.log("Square Root of Score:", sqrtScore);
+    </script>
+
+    <p>Log the value of Pi</p>
+    <script>
+      console.log("Value of Pi:", Math.PI);
+    </script>
+
+    <p>Implicit conversion: multiply string by number</p>
+    <script>
+      const result = "20" * 5;
+      console.log('"20" * 5 =', result);
+    </script>
+
+    <p>Use Math.max and Math.min</p>
+    <script>
+      const maxVal = Math.max(10, 20, mysteryLevel);
+      const minVal = Math.min(10, 20, mysteryLevel);
+      console.log("Highest Value:", maxVal);
+      console.log("Lowest Value:", minVal);
+    </script>
+  </body>
+</html>

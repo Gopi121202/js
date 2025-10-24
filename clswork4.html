@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>statistics widget</title>
+  </head>
+  <body>
+    <p>Statistics Widget</p>
+    <p>Random Number 1 to 100</p>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML = Math.floor(
+        Math.random() * 100
+      );
+    </script>
+    <p>User score as String</p>
+    <script>
+      var score = String(75);
+      document.write("User Score: " + score);
+    </script>
+    <p>String to Number</p>
+    <script>
+      var strScore = "75";
+      var numScore = Number(strScore);
+      document.write("<br/>Converted Score: " + numScore);
+    </script>
+    <p>Diff between user score and random number</p>
+    <script>
+      var randomNum = Math.floor(Math.random() * 100);
+      var userscore = 75;
+      document.write("Random Number:" + randomNum + "<br/>");
+      var diff = Math.abs(userscore - randomNum);
+      document.write("Diff:" + diff);
+    </script>
+    <p>Rounded Square Root</p>
+    <script>
+      var number = 75;
+      var sqrt = Math.round(Math.sqrt(number));
+      document.write("SquareRoot:" + sqrt);
+    </script>
+    <p>Pi Constant</p>
+    <script>
+      document.write("Pi Value:" + Math.PI);
+    </script>
+  </body>
+</html>
