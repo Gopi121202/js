@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Grocery Calculator</h1>
+    <script>
+      let itemRice = "Rice";
+      let itemSugar = "Sugar";
+      let itemWheat = "Wheat";
+
+      let priceRice = 45;
+      let priceSugar = 40;
+      let priceWheat = 30;
+
+      let qtyRice = 5;
+      let qtySugar = 3;
+      let qtyWheat = 2;
+
+      let costRice = priceRice * qtyRice;
+      let costSugar = priceSugar * qtySugar;
+      let costWheat = priceWheat * qtyWheat;
+
+      console.log(itemRice + " cost:Rs" + costRice);
+      console.log(itemSugar + " cost:Rs" + costSugar);
+      console.log(itemWheat + " cost:Rs" + costWheat);
+
+      let totalBill = costRice + costSugar + costWheat;
+      console.log("Total Bill: Rs" + totalBill);
+
+      qtySugar = 5;
+      costSugar = priceSugar * qtySugar;
+
+      totalBill = costRice + costSugar + costWheat;
+      console.log("Updated Sugar Quantity: " + qtySugar + " kg");
+      console.log("Updated Sugar Cost: Rs" + costSugar);
+      console.log("Updated Total Bill: RS" + totalBill);
+    </script>
+  </body>
+</html>

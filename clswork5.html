@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Item Return Page</title>
+  </head>
+  <body>
+    <h1
+      style="
+        background-color: bisque;
+        text-align: center;
+        font-weight: bolder;
+        text-transform: capitalize;
+      "
+    >
+      Online Mart
+    </h1>
+    <button onclick="checkEligibility()">Check Return Eligibility</button>
+    <p id="demo"></p>
+
+    <script>
+      function checkEligibility() {
+        let order = {
+          itemName: "Wireless Mouse",
+          isDelivered: true,
+          daysSinceDelivery: 5,
+        };
+
+        const hasItemName = "itemName" in order;
+        console.log("Item name exists:", hasItemName);
+
+        const message =
+          order.isDelivered && order.daysSinceDelivery <= 7
+            ? "Eligible for Return"
+            : "Return Period Expired";
+
+        document.getElementById("demo").innerHTML = message;
+
+        delete order.daysSinceDelivery;
+        console.log("Updated order:", order);
+      }
+    </script>
+  </body>
+</html>

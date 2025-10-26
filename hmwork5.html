@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <body style="background-color: bisque">
+    <h1 style="text-align: center">PROFILE PAGE</h1>
+    <button onclick="accessEligibility()" style="font-weight: bolder">
+      Check Access
+    </button>
+    <p id="demo"></p>
+    <script>
+      function accessEligibility() {
+        let access = {
+          userName: "Riya",
+          age: 21,
+          pos: "Admin",
+        };
+        const reply =
+          access.pos && access.age >= 18 ? "Access Granted" : "Access Denied";
+        document.getElementById("demo").innerHTML = reply;
+        document.getElementById("demo1").innerHTML =
+          access.userName + "\n" + access.pos;
+
+        const hasAge = "age" in access;
+        console.log("Age exists:", hasAge);
+        delete access.age;
+        console.log("updated Structure:", access);
+      }
+    </script>
+    <p id="demo1">Details Below</p>
+  </body>
+</html>
