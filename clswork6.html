@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Grocery Shop</title>
+  </head>
+  <body>
+    <h2>Online Grocery Shop</h2>
+    <script>
+      let productNames = ["Apple", "Banana", "Orange", "Grapes"];
+      let productPrices = [50, 30, 60, 55];
+      let productList = productNames.map((name, index) => {
+        return `Product: ${name} - Price: ${productPrices[index]}`;
+      });
+      console.log("All Products:");
+      productList.forEach((product) => console.log(product));
+      console.log("\nProducts with Price > 50:");
+      productNames.forEach((name, index) => {
+        if (productPrices[index] > 50) {
+          console.log(`Product: ${name} - Price: ${productPrices[index]}`);
+        }
+      });
+      productNames.push("Watermelon");
+      productPrices.push(80);
+      productList = productNames.map((name, index) => {
+        return `Product: ${name} - Price:${productPrices[index]}`;
+      });
+      console.log("\nUpdated Product List:");
+      productList.forEach((product) => console.log(product));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Calculator</title>
+  </head>
+  <body>
+    <h2 style="font-style: italic">Grocery Calculator</h2>
+    <ul style="font-size: large">
+      <li>Code1-Apple</li>
+      <li>Code2-Banana</li>
+      <li>Code3-Mango</li>
+    </ul>
+
+    <script>
+      let purchaseCount = 0;
+      while (purchaseCount < 5) {
+        let total = 0;
+        let code = parseInt(prompt("Enter your item code(1-3): "));
+        let quantity = parseInt(prompt("Enter the quatity of product"));
+        let product = "";
+        switch (code) {
+          case 1:
+            product = "APPLE";
+            total = 30 * quantity;
+            break;
+          case 2:
+            product = "BANANA";
+            total = 10 * quantity;
+            break;
+          case 3:
+            product = "MANGO";
+            total = 50 * quantity;
+            break;
+          default:
+            alert("Invalid!!! Product Code.");
+            continue;
+        }
+        alert(
+          "Product: " +
+            product +
+            "\nQuantity: " +
+            quantity +
+            "\nTotal: Rs " +
+            total
+        );
+        if (total > 100) {
+          alert("High Purchase");
+        } else {
+          alert("Normal Purchase");
+        }
+        purchaseCount++;
+      }
+    </script>
+  </body>
+</html>

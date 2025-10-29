@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+  </head>
+  <body>
+    <h2 style="font-style: italic">Guess the number</h2>
+
+    <script>
+      let chance = 0;
+      while (chance < 5) {
+        let code = parseInt(prompt("Enter your Guess(1-5): "));
+        if (code == 3) {
+          console.log("You guessed it right!!");
+          alert("WINNER");
+          break;
+        }
+        if (code == 1 || code == 2 || code == 4 || code == 5) {
+          console.log("Wrong Guess...Try Again!!");
+          continue;
+        } else {
+          alert("Invalid input");
+          chance++;
+        }
+      }
+      if (chance == 5) {
+        alert("GAME OVER");
+      }
+    </script>
+  </body>
+</html>
