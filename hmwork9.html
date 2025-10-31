@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Filtering</title>
+  </head>
+  <body>
+    <h2>Comment Filtering</h2>
+    <p style="font-style: italic">Here are the comments</p>
+    <button onclick="myFunction()">Get Filtered Comment</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      function myFunction() {
+        var comment = prompt("Enter your Comment:");
+        var change = comment.replace(/(bad|ugly|stupid)/gi, "***");
+        alert(change);
+        var number = comment.match(/[0-9]+/g);
+        var len = number.length;
+        document.getElementById("demo").innerHTML = "Number Count is " + len;
+        var word = comment.match(/\b[A-Z]/g);
+        document.getElementById("demo1").innerHTML = "Capitalized Word " + word;
+      }
+    </script>
+  </body>
+</html>
