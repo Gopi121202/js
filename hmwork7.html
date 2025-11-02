@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Reminder</title>
+  </head>
+  <body>
+    <h2 style="font-style: italic">Event Reminder</h2>
+    <p id="demo"></p>
+    <br />
+    <p id="demo1"></p>
+    <script>
+      let userDate = prompt("Enter your required date:");
+      let date = (document.getElementById("demo").innerHTML = Date(userDate));
+      let oldDate = new Date(0);
+      if (userDate < oldDate) {
+        document.getElementById("demo1").innerHTML =
+          "It has been more than a year since that date.";
+      } else {
+        document.getElementById("demo1").innerHTML =
+          "It has been less than a year since that date.";
+      }
+    </script>
+  </body>
+</html>

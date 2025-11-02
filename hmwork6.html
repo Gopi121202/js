@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Result Dashboard</title>
+  </head>
+  <body>
+    <h2>STUDENT RESULT DASHBOARD</h2>
+    <script>
+      let studentName = ["Sita", "Sham", "Reena", "John"];
+      let studentMark = [75, 70, 95, 45];
+      console.log("\n Students with marks more than 60");
+      studentName.forEach((name, index) => {
+        if (studentMark[index] > 60) {
+          console.log("Name: " + studentName);
+        }
+      });
+      console.log("\n Whether all Students passed or not ");
+      studentName.forEach((name, index) => {
+        if (studentMark[index] > 35) {
+          console.log("All Passed");
+        } else {
+          console.log("Name: " + studentName);
+        }
+      });
+      console.log("\n Students with marks >90 ");
+      studentName.forEach((name, index) => {
+        if (studentMark[index] > 60) {
+          console.log("Name: " + studentName);
+        }
+      });
+
+      //   studentMark = [75, 70, 95, 45];
+
+      //   function hasHighScore(marks) {
+      //     for (let i = 0; i < marks.length; i++) {
+      //       if (marks[i] > 90) {
+      //         return true;
+      //       }
+      //     }
+      //     return false;
+      //   }
+
+      //   if (hasHighScore(studentMark)) {
+      //     console.log("At least one student scored more than 90.");
+      //   } else {
+      //     console.log("No student scored more than 90.");
+      //   }
+
+      console.log("\n Students and score in descending order");
+      let students = [];
+      for (let i = 0; i < studentName.length; i++) {
+        students.push([studentName[i], studentMark[i]]);
+      }
+
+      students.sort(function (a, b) {
+        return b[1] - a[1];
+      });
+
+      for (let i = 0; i < students.length; i++) {
+        console.log(students[i][0] + ": " + students[i][1]);
+      }
+    </script>
+  </body>
+</html>
