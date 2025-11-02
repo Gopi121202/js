@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Format</title>
+  </head>
+  <body>
+    <h2>JSON Format</h2>
+    <script>
+      let persons = JSON.parse(
+        '{"name": "Kevin","email": "kevin23@gmail.com","message": "I am a Technical Assistant "}'
+      );
+      console.log(persons);
+      var greeting;
+      greeting = (val) => "Message received from " + val.name;
+      console.log(greeting(persons));
+      try {
+        console.log(persons.age);
+      } catch (err) {
+        console.log("Message");
+      }
+    </script>
+  </body>
+</html>
